@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Space Strategist</title>
+<meta name="description" content="Space Strategist, a space game for Android. Test build open now.">
+<meta name="theme-color" content="#05060f">
+<meta property="og:title" content="Space Strategist">
+<meta property="og:description" content="A space game for Android. The rest is yours to find out.">
+<meta property="og:image" content="images/hero-planet.webp">
+<link rel="icon" href="images/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Readex+Pro:wght@300;400;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="nebula" aria-hidden="true"></div>
+
+<div class="test-ribbon" role="note">
+  <span class="pulse" aria-hidden="true"></span>
+  <span class="long" data-i18n="ribbon"></span>
+  <span class="short" data-i18n="ribbonShort"></span>
+</div>
+
+<header class="bar">
+  <a class="brand" href="#top" aria-label="Space Strategist">
+    <img src="images/icon-192.png" alt="" width="34" height="34">
+    <span data-i18n="name"></span>
+  </a>
+  <nav class="links">
+    <a href="#install" data-i18n="navInstall"></a>
+    <a href="#test" data-i18n="navTest"></a>
+  </nav>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en">English</button>
+    <button type="button" data-lang="ar">العربية</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="chip test" data-i18n="testBuild"></span><span class="chip" id="build-chip"></span></p>
+      <h1 data-i18n="title"></h1>
+      <p class="tagline" data-i18n="tagline"></p>
+      <p class="lead" data-i18n="lead"></p>
+      <div class="cta">
+        <a class="button primary" id="download" href="#install">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span><b data-i18n="download"></b><small id="download-meta"></small></span>
+        </a>
+        <a class="button ghost" href="#install" data-i18n="howInstall"></a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit o1"><span class="moon"></span></div>
+      <div class="orbit o2"><span class="ship"></span></div>
+      <img class="hero-planet" src="images/hero-planet.webp" alt="" width="600" height="600">
+    </div>
+  </section>
+
+  <section class="unknown" id="worlds">
+    <h2 data-i18n="unknownTitle"></h2>
+    <p class="section-lead" data-i18n="unknownLead"></p>
+    <div class="eclipses" id="eclipses"></div>
+    <p class="whisper" id="whisper" aria-live="polite"></p>
+  </section>
+
+  <section class="verbs">
+    <article class="verb">
+      <div class="verb-shot" style="background-image: url('images/shots/fly.webp')"></div>
+      <h3 data-i18n="flyT"></h3>
+      <p data-i18n="fly"></p>
+    </article>
+    <article class="verb">
+      <div class="verb-shot" style="background-image: url('images/shots/fight.webp')"></div>
+      <h3 data-i18n="fightT"></h3>
+      <p data-i18n="fight"></p>
+    </article>
+    <article class="verb">
+      <div class="verb-shot" style="background-image: url('images/shots/land.webp')"></div>
+      <h3 data-i18n="landT"></h3>
+      <p data-i18n="land"></p>
+    </article>
+  </section>
+
+  <section class="why" id="why">
+    <h2 data-i18n="whyTitle"></h2>
+    <p class="section-lead" data-i18n="whyLead"></p>
+    <ol class="steps">
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why1t"></h3><p data-i18n="why1"></p></li>
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why2t"></h3><p data-i18n="why2"></p></li>
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why3t"></h3><p data-i18n="why3"></p></li>
+    </ol>
+  </section>
+
+  <section class="install" id="install">
+    <h2 data-i18n="installTitle"></h2>
+    <div class="install-grid">
+      <ol class="install-steps">
+        <li><h3 data-i18n="i1t"></h3><p data-i18n="i1"></p></li>
+        <li><h3 data-i18n="i2t"></h3><p data-i18n="i2"></p></li>
+        <li><h3 data-i18n="i3t"></h3><p data-i18n="i3"></p></li>
+        <li><h3 data-i18n="i4t"></h3><p data-i18n="i4"></p></li>
+      </ol>
+      <aside class="requirements">
+        <h3 data-i18n="reqTitle"></h3>
+        <ul>
+          <li data-i18n="req1"></li>
+          <li data-i18n="req2"></li>
+          <li data-i18n="req3"></li>
+        </ul>
+        <a class="button primary wide" id="download-2" href="#install"><span><b data-i18n="download"></b><small id="download-meta-2"></small></span></a>
+        <p class="note" data-i18n="protect"></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="test" id="test">
+    <h2 data-i18n="testTitle"></h2>
+    <p class="section-lead" data-i18n="testLead"></p>
+    <form class="report" id="report" autocomplete="off" novalidate>
+      <div class="device">
+        <h3 data-i18n="deviceTitle"></h3>
+        <p class="device-line" id="device-line"></p>
+        <label for="phone"><span data-i18n="phoneModel"></span></label>
+        <input id="phone" name="phone" type="text" maxlength="60">
+      </div>
+      <fieldset>
+        <legend data-i18n="qSmooth"></legend>
+        <div class="choices" data-name="smooth"></div>
+      </fieldset>
+      <fieldset>
+        <legend data-i18n="qHeat"></legend>
+        <div class="choices" data-name="heat"></div>
+      </fieldset>
+      <fieldset>
+        <legend data-i18n="qGround"></legend>
+        <div class="choices" data-name="ground"></div>
+      </fieldset>
+      <fieldset>
+        <legend data-i18n="qCrash"></legend>
+        <div class="choices" data-name="crash"></div>
+      </fieldset>
+      <label class="notes" for="notes"><span data-i18n="notes"></span></label>
+      <textarea id="notes" name="notes" rows="4" maxlength="2000"></textarea>
+      <input class="trap" id="botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="report-actions">
+        <button type="submit" class="button primary" id="send" data-i18n="send"></button>
+        <span class="status" id="status" role="status"></span>
+      </div>
+      <p class="note" data-i18n="reportNote"></p>
+    </form>
+    <div class="thanks" id="thanks" hidden>
+      <h3 data-i18n="thanksTitle"></h3>
+      <p data-i18n="thanks"></p>
+      <button type="button" class="button ghost" id="again" data-i18n="again"></button>
+    </div>
+  </section>
+
+  <section class="roadmap">
+    <h2 data-i18n="roadTitle"></h2>
+    <div class="timeline">
+      <div class="milestone now"><span class="dot"></span><span class="layer-tag" data-i18n="r1tag"></span><h3 data-i18n="r1t"></h3><p data-i18n="r1"></p></div>
+      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r2tag"></span><h3 data-i18n="r2t"></h3><p data-i18n="r2"></p></div>
+      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r3tag"></span><h3 data-i18n="r3t"></h3><p data-i18n="r3"></p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><b data-i18n="name"></b> · <span data-i18n="footTest"></span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

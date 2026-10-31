@@ -1,1 +1,0 @@
-# space-strategist.github.io
