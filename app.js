@@ -472,13 +472,16 @@
   if (asked === "ar" || asked === "en") initial = asked;
   if (!initial) { try { initial = localStorage.getItem("lang"); } catch (e) { /* not remembered */ } }
   if (!initial) initial = (navigator.language || "ar").toLowerCase().startsWith("ar") ? "ar" : (navigator.language ? "en" : "ar");
-  renderEclipses();
-  setLanguage(initial);
-  paintStars();
+  // Each part on its own: one an old browser cannot run leaves the rest working, and the
+  // page keeps the Arabic words written into it as it was published.
+  const attempt = (part) => { try { part(); } catch (e) { /* this part left out */ } };
+  attempt(renderEclipses);
+  attempt(() => setLanguage(initial));
+  attempt(paintStars);
   let resizeTimer = 0;
-  window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(paintStars, 200); });
-  loadBuild();
-  readDevice();
-  measureRefresh();
-  approach();
+  window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => attempt(paintStars), 200); });
+  attempt(loadBuild);
+  attempt(readDevice);
+  attempt(measureRefresh);
+  attempt(approach);
 })();

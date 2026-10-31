@@ -13,7 +13,9 @@
 <link rel="apple-touch-icon" href="images/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Readex+Pro:wght@300;400;600&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<!-- The fonts never hold the page back: it shows at once in the phone's own fonts, then in these as they arrive. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Readex+Pro:wght@300;400;600&family=Reem+Kufi:wght@500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Readex+Pro:wght@300;400;600&family=Reem+Kufi:wght@500;700&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,18 +24,18 @@
 
 <div class="test-ribbon" role="note">
   <span class="pulse" aria-hidden="true"></span>
-  <span class="long" data-i18n="ribbon"></span>
-  <span class="short" data-i18n="ribbonShort"></span>
+  <span class="long" data-i18n="ribbon" dir="rtl">هذه نسخة اختبار. نجرّب اللعبة على جوالات كثيرة مختلفة لنعرف كيف تعمل عليها، ونصلح ما يظهر من مشاكل قبل صدورها.</span>
+  <span class="short" data-i18n="ribbonShort" dir="rtl">نسخة اختبار: ساعدنا نقيس أداءها على جوالك</span>
 </div>
 
 <header class="bar">
   <a class="brand" href="#top" aria-label="Space Strategist">
     <img src="images/icon-192.png" alt="" width="34" height="34">
-    <span data-i18n="name"></span>
+    <span data-i18n="name" dir="rtl">استراتيجي الفضاء</span>
   </a>
   <nav class="links">
-    <a href="#install" data-i18n="navInstall"></a>
-    <a href="#test" data-i18n="navTest"></a>
+    <a href="#install" data-i18n="navInstall" dir="rtl">التثبيت</a>
+    <a href="#test" data-i18n="navTest" dir="rtl">أرسل تقريرًا</a>
   </nav>
   <div class="lang" role="group" aria-label="Language">
     <button type="button" data-lang="en">English</button>
@@ -44,16 +46,16 @@
 <main id="top">
   <section class="hero">
     <div class="hero-text">
-      <p class="eyebrow"><span class="chip test" data-i18n="testBuild"></span><span class="chip" id="build-chip"></span></p>
-      <h1 data-i18n="title"></h1>
-      <p class="tagline" data-i18n="tagline"></p>
-      <p class="lead" data-i18n="lead"></p>
+      <p class="eyebrow"><span class="chip test" data-i18n="testBuild" dir="rtl">نسخة اختبار</span><span class="chip" id="build-chip"></span></p>
+      <h1 data-i18n="title" dir="rtl">استراتيجي الفضاء</h1>
+      <p class="tagline" data-i18n="tagline" dir="rtl">حلّق وقاتل واهبط على العوالم</p>
+      <p class="lead" data-i18n="lead" dir="rtl">لعبة فضاء على أندرويد. والباقي تكتشفه بنفسك.</p>
       <div class="cta">
         <a class="button primary" id="download" href="#install">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4.5-4.5M12 14 7.5 9.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-          <span><b data-i18n="download"></b><small id="download-meta"></small></span>
+          <span><b data-i18n="download" dir="rtl">حمّل نسخة الاختبار</b><small id="download-meta"></small></span>
         </a>
-        <a class="button ghost" href="#install" data-i18n="howInstall"></a>
+        <a class="button ghost" href="#install" data-i18n="howInstall" dir="rtl">طريقة التثبيت</a>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -64,8 +66,8 @@
   </section>
 
   <section class="unknown" id="worlds">
-    <h2 data-i18n="unknownTitle"></h2>
-    <p class="section-lead" data-i18n="unknownLead"></p>
+    <h2 data-i18n="unknownTitle" dir="rtl">عوالم لم ترها بعد</h2>
+    <p class="section-lead" data-i18n="unknownLead" dir="rtl">كل واحد منها مختلف، ولن نقول أكثر.</p>
     <div class="eclipses" id="eclipses"></div>
     <p class="whisper" id="whisper" aria-live="polite"></p>
   </section>
@@ -73,109 +75,109 @@
   <section class="verbs">
     <article class="verb">
       <div class="verb-shot" style="background-image: url('images/shots/fly.webp')"></div>
-      <h3 data-i18n="flyT"></h3>
-      <p data-i18n="fly"></p>
+      <h3 data-i18n="flyT" dir="rtl">حلّق</h3>
+      <p data-i18n="fly" dir="rtl">بين العوالم، بالسرعة التي تجرؤ عليها.</p>
     </article>
     <article class="verb">
       <div class="verb-shot" style="background-image: url('images/shots/fight.webp')"></div>
-      <h3 data-i18n="fightT"></h3>
-      <p data-i18n="fight"></p>
+      <h3 data-i18n="fightT" dir="rtl">قاتل</h3>
+      <p data-i18n="fight" dir="rtl">الفضاء ليس خاليًا كما يبدو.</p>
     </article>
     <article class="verb">
       <div class="verb-shot" style="background-image: url('images/shots/land.webp')"></div>
-      <h3 data-i18n="landT"></h3>
-      <p data-i18n="land"></p>
+      <h3 data-i18n="landT" dir="rtl">اهبط</h3>
+      <p data-i18n="land" dir="rtl">بعض الأشياء لا تُرى إلا عن قرب.</p>
     </article>
   </section>
 
   <section class="why" id="why">
-    <h2 data-i18n="whyTitle"></h2>
-    <p class="section-lead" data-i18n="whyLead"></p>
+    <h2 data-i18n="whyTitle" dir="rtl">لماذا نسخة اختبار؟</h2>
+    <p class="section-lead" data-i18n="whyLead" dir="rtl">قبل أن تصدر اللعبة نريدها سلسة على كل جوال. الجوالات تختلف كثيرًا، ولهذا نحتاج أن تُلعب على أكبر عدد منها.</p>
     <ol class="steps">
-      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why1t"></h3><p data-i18n="why1"></p></li>
-      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why2t"></h3><p data-i18n="why2"></p></li>
-      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why3t"></h3><p data-i18n="why3"></p></li>
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why1t" dir="rtl">ثبّتها</h3><p data-i18n="why1" dir="rtl">حجمها أقل من ميجابايتين.</p></li>
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why2t" dir="rtl">العب قليلًا</h3><p data-i18n="why2" dir="rtl">عشر دقائق تكفي.</p></li>
+      <li><span class="step-num" aria-hidden="true"></span><h3 data-i18n="why3t" dir="rtl">أرسل تقريرك</h3><p data-i18n="why3" dir="rtl">من أسفل هذه الصفحة، ويصلنا مباشرة.</p></li>
     </ol>
   </section>
 
   <section class="install" id="install">
-    <h2 data-i18n="installTitle"></h2>
+    <h2 data-i18n="installTitle" dir="rtl">ثبّت نسخة الاختبار</h2>
     <div class="install-grid">
       <ol class="install-steps">
-        <li><h3 data-i18n="i1t"></h3><p data-i18n="i1"></p></li>
-        <li><h3 data-i18n="i2t"></h3><p data-i18n="i2"></p></li>
-        <li><h3 data-i18n="i3t"></h3><p data-i18n="i3"></p></li>
-        <li><h3 data-i18n="i4t"></h3><p data-i18n="i4"></p></li>
+        <li><h3 data-i18n="i1t" dir="rtl">حمّل الملف</h3><p data-i18n="i1" dir="rtl">اضغط زر التحميل من جوالك الأندرويد.</p></li>
+        <li><h3 data-i18n="i2t" dir="rtl">افتحه</h3><p data-i18n="i2" dir="rtl">افتح الملف من الإشعار، أو من مجلد التنزيلات.</p></li>
+        <li><h3 data-i18n="i3t" dir="rtl">اسمح بالتثبيت</h3><p data-i18n="i3" dir="rtl">سيطلب أندرويد مرة واحدة السماح بالتثبيت من المتصفح أو من مدير الملفات: اسمح له لهذا التثبيت.</p></li>
+        <li><h3 data-i18n="i4t" dir="rtl">العب</h3><p data-i18n="i4" dir="rtl">ثبّت، وافتح «استراتيجي الفضاء» واضغط «العب». كل نسخة اختبار جديدة تُثبَّت فوق القديمة.</p></li>
       </ol>
       <aside class="requirements">
-        <h3 data-i18n="reqTitle"></h3>
+        <h3 data-i18n="reqTitle" dir="rtl">ما تحتاجه</h3>
         <ul>
-          <li data-i18n="req1"></li>
-          <li data-i18n="req2"></li>
-          <li data-i18n="req3"></li>
+          <li data-i18n="req1" dir="rtl">جوال أو جهاز لوحي بنظام أندرويد الثامن أو أحدث</li>
+          <li data-i18n="req2" dir="rtl">نحو ميجابايتين للتثبيت، وبعض المساحة الفارغة</li>
+          <li data-i18n="req3" dir="rtl">لا حساب، ولا حاجة إلى الإنترنت أثناء اللعب</li>
         </ul>
-        <a class="button primary wide" id="download-2" href="#install"><span><b data-i18n="download"></b><small id="download-meta-2"></small></span></a>
-        <p class="note" data-i18n="protect"></p>
+        <a class="button primary wide" id="download-2" href="#install"><span><b data-i18n="download" dir="rtl">حمّل نسخة الاختبار</b><small id="download-meta-2"></small></span></a>
+        <p class="note" data-i18n="protect" dir="rtl">اللعبة ليست في متجر بعد، لذلك قد يحذّرك أندرويد من تطبيق لا يعرفه، وهذا متوقع في نسخة الاختبار.</p>
       </aside>
     </div>
   </section>
 
   <section class="test" id="test">
-    <h2 data-i18n="testTitle"></h2>
-    <p class="section-lead" data-i18n="testLead"></p>
+    <h2 data-i18n="testTitle" dir="rtl">أخبرنا كيف عملت معك</h2>
+    <p class="section-lead" data-i18n="testLead" dir="rtl">أجب عن أربعة أسئلة سريعة واضغط «أرسل». تفاصيل جوالك تُملأ تلقائيًا.</p>
     <form class="report" id="report" autocomplete="off" novalidate>
       <div class="device">
-        <h3 data-i18n="deviceTitle"></h3>
+        <h3 data-i18n="deviceTitle" dir="rtl">جوالك</h3>
         <p class="device-line" id="device-line"></p>
-        <label for="phone"><span data-i18n="phoneModel"></span></label>
+        <label for="phone"><span data-i18n="phoneModel" dir="rtl">طراز الجوال</span></label>
         <input id="phone" name="phone" type="text" maxlength="60">
       </div>
       <fieldset>
-        <legend data-i18n="qSmooth"></legend>
+        <legend data-i18n="qSmooth" dir="rtl">ما مدى سلاسة اللعب؟</legend>
         <div class="choices" data-name="smooth"></div>
       </fieldset>
       <fieldset>
-        <legend data-i18n="qHeat"></legend>
+        <legend data-i18n="qHeat" dir="rtl">هل سخن الجوال؟</legend>
         <div class="choices" data-name="heat"></div>
       </fieldset>
       <fieldset>
-        <legend data-i18n="qGround"></legend>
+        <legend data-i18n="qGround" dir="rtl">هل ظهرت الأرض في وقتها؟</legend>
         <div class="choices" data-name="ground"></div>
       </fieldset>
       <fieldset>
-        <legend data-i18n="qCrash"></legend>
+        <legend data-i18n="qCrash" dir="rtl">هل أُغلقت وحدها أو علّقت؟</legend>
         <div class="choices" data-name="crash"></div>
       </fieldset>
-      <label class="notes" for="notes"><span data-i18n="notes"></span></label>
+      <label class="notes" for="notes"><span data-i18n="notes" dir="rtl">شيء آخر؟ وأين حدث؟</span></label>
       <textarea id="notes" name="notes" rows="4" maxlength="2000"></textarea>
       <input class="trap" id="botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="report-actions">
-        <button type="submit" class="button primary" id="send" data-i18n="send"></button>
+        <button type="submit" class="button primary" id="send" data-i18n="send" dir="rtl">أرسل</button>
         <span class="status" id="status" role="status"></span>
       </div>
-      <p class="note" data-i18n="reportNote"></p>
+      <p class="note" data-i18n="reportNote" dir="rtl">يصلنا ما اخترته وتفاصيل جوالك فقط، ولا شيء غير ذلك.</p>
     </form>
     <div class="thanks" id="thanks" hidden>
-      <h3 data-i18n="thanksTitle"></h3>
-      <p data-i18n="thanks"></p>
-      <button type="button" class="button ghost" id="again" data-i18n="again"></button>
+      <h3 data-i18n="thanksTitle" dir="rtl">وصل تقريرك</h3>
+      <p data-i18n="thanks" dir="rtl">شكرًا لك، فهو يساعدنا أن تعمل اللعبة جيدًا على جوالات مثل جوالك.</p>
+      <button type="button" class="button ghost" id="again" data-i18n="again" dir="rtl">أرسل تقريرًا آخر</button>
     </div>
   </section>
 
   <section class="roadmap">
-    <h2 data-i18n="roadTitle"></h2>
+    <h2 data-i18n="roadTitle" dir="rtl">ماذا بعد</h2>
     <div class="timeline">
-      <div class="milestone now"><span class="dot"></span><span class="layer-tag" data-i18n="r1tag"></span><h3 data-i18n="r1t"></h3><p data-i18n="r1"></p></div>
-      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r2tag"></span><h3 data-i18n="r2t"></h3><p data-i18n="r2"></p></div>
-      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r3tag"></span><h3 data-i18n="r3t"></h3><p data-i18n="r3"></p></div>
+      <div class="milestone now"><span class="dot"></span><span class="layer-tag" data-i18n="r1tag" dir="rtl">الآن</span><h3 data-i18n="r1t" dir="rtl">نسخ الاختبار</h3><p data-i18n="r1" dir="rtl">النسخ الجديدة تُنشر هنا أولًا بأول، وكل نسخة تصلح ما وجده المختبرون.</p></div>
+      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r2tag" dir="rtl">بعدها</span><h3 data-i18n="r2t" dir="rtl">سلسة على كل جوال</h3><p data-i18n="r2" dir="rtl">تقاريركم تدلنا على الجوالات التي تحتاج إلى عمل.</p></div>
+      <div class="milestone"><span class="dot"></span><span class="layer-tag" data-i18n="r3tag" dir="rtl">ثم</span><h3 data-i18n="r3t" dir="rtl">اللعبة الكاملة</h3><p data-i18n="r3" dir="rtl">اللعبة الكاملة ستُنشر هنا، في هذا الموقع.</p></div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <p><b data-i18n="name"></b> · <span data-i18n="footTest"></span></p>
+  <p><b data-i18n="name" dir="rtl">استراتيجي الفضاء</b> · <span data-i18n="footTest" dir="rtl">نسخة اختبار، وقد تحتوي على أخطاء</span></p>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
